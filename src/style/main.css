@@ -1,8 +1,175 @@
-html {
-    background-color: #1e1f22;
-    color: whitesmoke;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
-a {
-     color: whitesmoke;
+:root {
+    --font__color--main: whitesmoke;
+    --color--accent: #FDE916;
+    --color--secondary: #CE512A;
+    --color--blue: #36679C;
+}
+
+a,
+a:link,
+a:visited,
+a:hover {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Roboto Thin", sans-serif;
+    font-size: 1.5rem;
+    color: var(--font__color--main);
+    background-color: #1e1f22;
+}
+
+.header, .header__subtitle {
+    font-family: "Nunito Sans", sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+
+.header {
+    font-size: 2.75em;
+}
+
+.header__subtitle {
+    padding-top: 0;
+}
+
+.header__emoji {
+    vertical-align: middle;
+}
+
+.nav {
+    padding: 10px 40px;
+}
+
+.nav__ul {
+    list-style-type: none;
+}
+
+.nav__link {
+    color: var(--font__color--main);
+}
+
+.main {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.main__img {
+    width: auto;
+    height: 800px;
+    border: 6px solid var(--color--accent);
+    box-shadow: 0 5px 15px 3px rgb(253, 153, 22);
+}
+
+.main__description {
+    line-height: 1.75;
+    padding: 100px 300px;
+    /*text-indent: 15%; !* Отступ текста *!*/
+    white-space: pre-line; /* Пробелы */
+}
+
+.main__ascii {
+    color: var(--color--accent)
+}
+
+.main__code {
+    display: block;
+    padding-top: 10px;
+}
+
+.benefits__section {
+    padding: 50px;
+}
+
+.benefits__section--img {
+    width: auto;
+    height: 500px;
+    border: 5px dashed var(--color--accent);
+}
+
+.benefits__section--description {
+    padding-top: 30px;
+    text-align: center;
+    text-transform: lowercase;
+}
+
+.review {
+    margin: 30px;
+    padding: 35px;
+    border: 5px solid var(--color--accent);
+    border-radius: 5px;
+    height: 600px;
+    width: 600px;
+    box-shadow: 0 5px 15px 3px rgb(253, 153, 22);
+}
+
+.review__img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.review__name {
+    font-size: 1.75em;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+.review__rating {
+    width: 200px;
+    height: auto;
+    padding: 15px 0;
+}
+
+.review__text {
+    line-height: 1.25;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.footer__hr {
+    border: 1px solid var(--font__color--main);
+    box-shadow: 0 0 5px 1px var(--color--accent);
+}
+
+.contacts {
+    padding-top: 10px;
+}
+
+.contacts__logo {
+    padding: 10px;
+}
+
+.contacts__mail {
+    color: var(--color--accent);
+    padding-left: 10px;
+}
+
+.social-media {
+    padding-top: 35px;
+}
+
+.social-media__link__img {
+    width: 64px;
+    height: auto;
+}
+
+.color--yellow {
+    color: var(--color--accent);
+}
+
+#logo {
+    margin: 20px 30px;
 }
