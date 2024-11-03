@@ -8,87 +8,97 @@
     <meta name="description" content="Игровой клуб GG Place - идеальное место для комфортного отдыха за любимым занятием">
     <title>GG Place</title>
     <link rel="stylesheet" href="./src/style/main.css">
+    <link rel="stylesheet" href="./src/style/utility.css">
 </head>
 <body>
 <header>
-    <img src="src/img/branding/logo_ver2.svg" alt="logo" width="256px">
-    <nav>
-        <ul>
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Забронировать место</a></li>
-            <li><a href="#">Контакты</a></li>
+    <img id="logo" src="src/img/branding/logo_ver2.svg" alt="GG Place" width="256px">
+    <nav class="nav">
+        <ul class="nav__ul">
+            <li><a class="nav__link" href="#">О нас</a></li>
+            <li><a class="nav__link" href="#">Забронировать место</a></li>
+            <li><a class="nav__link" href="#">Контакты</a></li>
         </ul>
     </nav>
 </header>
 <main>
-    <h1><strong>GG Place</strong> - <em>лучшее</em> место для хорошего времяпрепровождения</h1>
+    <h1 class="header"><span class="color--yellow">GG</span> Place <span class="header__emoji">⚡</span></h1>
+    <h2 class="header__subtitle"> <span class="cursive">лучшее</span> место для хорошего времяпрепровождения</h2>
 
-    <section>
-        <img src="src/img/main_img.jpg" alt="" width="50%">
-        <p>GG Place - это <del>компьютерный</del> киберспортивный клуб, который нацелен на предоставление лучшего сервиса для вас и ваших друзей. Играйте, отдыхайте и наслаждайтесь в нашем уютном заведении!</p>
+    <section class="main">
+        <img class="main__img" src="src/img/main_img.jpg" alt="" width="1280">
+        <p class="main__description">GG Place - это <span class="line-through">компьютерный</span> <span class="underline">киберспортивный</span> клуб, который нацелен на предоставление лучшего сервиса для вас и ваших друзей. Играйте, отдыхайте и наслаждайтесь в нашем уютном заведении!</p>
+
+        <pre class="main__ascii">
+/\_/\
+( o.o )
+> ^ <
+            <code class="main__code">follow the yellow cat</code>
+        </pre>
     </section>
 
-    <article>
-        <section>
-            <img src="src/img/computer.jpg" alt="" width="512px">
-            <p>Для вас круглосуточно доступны лучшие ПК с последними комплектующими, поддерживающими все новые технологии, такие как DLSS и RTX</p>
+    <article class="benefits">
+        <section class="benefits__section">
+            <img class="benefits__section--img"
+                 src="src/img/computer.jpg"
+                 alt="Вид изнутри на компьютер с топовыми комплектующими"
+                 aria-describedby="first_desc">
+            <p class="benefits__section--description" id="first_desc">Для вас круглосуточно доступны лучшие ПК с последними комплектующими, поддерживающими все новые технологии, такие как DLSS и RTX</p>
         </section>
-        <section>
-            <img src="src/img/display.jpg" alt="" width="512px">
-            <p>Топовые мониторы и лучшая перифирия</p>
+        <section class="benefits__section">
+            <img class="benefits__section--img"
+                 src="src/img/display.jpg"
+                 alt="Два монитора с красивой подсветкой"
+                 aria-describedby="second_desc">
+            <p class="benefits__section--description" id="second_desc">Топовые мониторы и лучшая переферия</p>
         </section>
-        <section>
-            <img src="src/img/sound.jpg" alt="" width="512px">
-            <p>В GG Place открыты зоны коворкинга, в которых есть все для работы с видео, графикой и звуком</p>
+        <section class="benefits__section">
+            <img class="benefits__section--img"
+                 src="src/img/sound.jpg"
+                 alt="Монитор на котором видно открытую программу для работы со звуком"
+                 aria-describedby="third_desc">
+            <p class="benefits__section--description" id="third_desc">В GG Place открыты зоны коворкинга, в которых есть все для работы с видео, графикой и звуком</p>
         </section>
     </article>
 
     <section class="review-slider">
-        <div>
-            <img src="src/img/profile_pic/profile1.jpg" alt="profile" width="128px">
-            <p>Иван</p>
-            <img src="src/img/review/5_star_review.svg" alt="rating">
-            <p>Я посетил компьютерный клуб и был приятно удивлён оказанным сервисом. Оборудование в клубе находится в отличном состоянии, что создаёт комфортную атмосферу для работы и отдыха. Я провёл там отличное время. Определённо рекомендую этот клуб как отличное место для проведения времени и наслаждения играми.</p>
+        <div class="review">
+            <img class="review__img" src="src/img/profile_pic/profile1.jpg" alt="profile">
+            <p class="review__name">Иван</p>
+            <img class="review__rating" src="src/img/review/5_star_review.svg" alt="rating">
+            <p class="review__text">Я посетил компьютерный клуб и был приятно удивлён оказанным сервисом. Оборудование в клубе находится в отличном состоянии, что создаёт комфортную атмосферу для работы и отдыха. Я провёл там отличное время. Определённо рекомендую этот клуб как отличное место для проведения времени и наслаждения играми.</p>
         </div>
-        <div>
-            <img src="src/img/profile_pic/profile2.jpg" alt="profile" width="128px">
-            <p>Владимир</p>
-            <img src="src/img/review/4_star_review.svg" alt="rating">
-            <p>Первый раз пришёл в этот клуб, все очень понравилось. Удобное расположение(рядом две станции метро!) Доброжелательные и отзывчивые админы, с удовольствием вам помогут расположиться и ответят на ваши вопросы. Советую вам этот клуб!</p>
+        <div class="review">
+            <img class="review__img" src="src/img/profile_pic/profile2.jpg" alt="profile">
+            <p class="review__name">Владимир</p>
+            <img class="review__rating" src="src/img/review/4_star_review.svg" alt="rating">
+            <p class="review__text">Первый раз пришёл в этот клуб, все очень понравилось. Удобное расположение(рядом две станции метро!) Доброжелательные и отзывчивые админы, с удовольствием вам помогут расположиться и ответят на ваши вопросы. Советую вам этот клуб!</p>
         </div>
-        <div>
-            <img src="src/img/profile_pic/profile3.jpg" alt="profile" width="128px">
-            <p>Артур</p>
-            <img src="src/img/review/5_star_review.svg" alt="rating">
-            <p>Всех приветствую, открылся клуб рядом с моим домом, накинули приветственных бонусов, хорошие админы. Вся техника новая, наушники удобные, чисто красиво. Вообщем и целом советую ходить, пока народу не полный зал)</p>
+        <div class="review">
+            <img class="review__img" src="src/img/profile_pic/profile3.jpg" alt="profile">
+            <p class="review__name">Артур</p>
+            <img class="review__rating" src="src/img/review/5_star_review.svg" alt="rating">
+            <p class="review__text">Всех приветствую, открылся клуб рядом с моим домом, накинули приветственных бонусов, хорошие админы. Вся техника новая, наушники удобные, чисто красиво. Вообщем и целом советую ходить, пока народу не полный зал)</p>
         </div>
     </section>
-
-    <blockquote>
-        <p>- Сильный не тот, кто не падал, а тот кто после падения каждый раз поднимается снова</p>
-        <p>Дж. Стэйтхем<sup>&copy;</sup></p>
-    </blockquote>
 </main>
 <footer>
-    <section>
-        <img src="src/img/branding/logo_ver1.svg" alt="logo" width="128px">
-        <a href="mailto:gg@place.ru">gg@place.ru</a>
+    <hr class="footer__hr">
+    <section class="contacts">
+        <img class="contacts__logo" src="src/img/branding/logo_ver1.svg" alt="GG Place" width="128px">
+        <a class="contacts__mail" href="mailto:gg@place.ru">gg@place.ru</a>
     </section>
 
-    <pre>
-         /\_/\
-        ( o.o )
-         > ^ <
-    </pre>
-
-    <code>print("Hello World")</code>
-
-    <p>top secret formula: M<sup>2</sup><sub>(money)</sub> + L<sub>(luck)</sub> = S<sub>(success)</sub></p>
-
-    <section>
-        <a href="#"><img src="src/img/icons/vk.svg" alt="" width="64px"></a>
-        <a href="#"><img src="src/img/icons/yt.svg" alt="" width="64px"></a>
-        <a href="#"><img src="src/img/icons/whatsapp.svg" alt="" width="64px"></a>
+    <section class="social-media">
+        <a class="social-media__link" href="#">
+            <img class="social-media__link__img" src="src/img/icons/vk.svg" alt="">
+        </a>
+        <a class="social-media__link" href="#">
+            <img class="social-media__link__img" src="src/img/icons/yt.svg" alt="">
+        </a>
+        <a class="social-media__link" href="#">
+            <img class="social-media__link__img" src="src/img/icons/whatsapp.svg" alt="">
+        </a>
     </section>
 </footer>
 </body>
