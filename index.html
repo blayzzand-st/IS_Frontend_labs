@@ -2,17 +2,34 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Игровой клуб GG Place - идеальное место для комфортного отдыха за любимым занятием">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <meta content="Игровой клуб GG Place - идеальное место для комфортного отдыха за любимым занятием"
+          name="description">
     <title>GG Place</title>
-    <link rel="stylesheet" href="./src/style/main.css">
-    <link rel="stylesheet" href="./src/style/utility.css">
+    <link href="./src/style/main.css" rel="stylesheet">
+    <link href="./src/style/utility.css" rel="stylesheet">
+    <link href="./src/style/media.css" rel="stylesheet">
+    <script defer src="./src/js/main.js"></script>
 </head>
 <body>
-<header>
-    <img id="logo" src="src/img/branding/logo_ver2.svg" alt="GG Place" width="256px">
+<header class="header">
+    <div class="header__decor"></div>
+    <img alt="GG Place" class="header__img" id="logo" src="src/img/branding/logo_ver2.svg">
+    <svg class="header__decor--gamepad" fill="none" height="800" viewBox="0 0 800 800" width="800"
+         xmlns="http://www.w3.org/2000/svg">
+        <path d="M283.333 366.667V466.667M233.333 416.667H333.333" stroke="white" stroke-linecap="round"
+              stroke-width="50"/>
+        <path d="M87.4237 503.95L69.343 579.22C56.6313 632.143 90.4217 685.067 144.805 697.417C190.665 707.83 237.84 686.047 258.554 644.887L262.821 636.41C281.84 598.62 321.307 574.663 364.547 574.663H435.453C478.693 574.663 518.16 598.62 537.18 636.41L541.447 644.887C562.16 686.047 609.333 707.83 655.197 697.417C709.577 685.067 743.37 632.143 730.657 579.22L694.497 428.677C674.057 343.58 663.833 301.03 634.843 273.124C627.503 266.061 619.397 259.801 610.66 254.456C576.137 233.333 531.237 233.333 441.44 233.333H358.56C268.762 233.333 223.863 233.333 189.341 254.456C180.605 259.801 172.495 266.061 165.158 273.124C144.272 293.227 133.128 320.931 120.887 366.667"
+              stroke="white" stroke-linecap="round" stroke-width="50"/>
+        <path d="M400 233.333V200C400 181.591 414.923 166.667 433.333 166.667H466.667C485.077 166.667 500 151.743 500 133.333V100"
+              stroke="white" stroke-linecap="round" stroke-width="50"/>
+        <path d="M533.333 366.667C533.333 385.077 518.41 400 500 400C481.59 400 466.667 385.077 466.667 366.667C466.667 348.257 481.59 333.333 500 333.333C518.41 333.333 533.333 348.257 533.333 366.667Z"
+              fill="white"/>
+        <path d="M600 466.667C600 485.077 585.077 500 566.667 500C548.257 500 533.333 485.077 533.333 466.667C533.333 448.257 548.257 433.333 566.667 433.333C585.077 433.333 600 448.257 600 466.667Z"
+              fill="white"/>
+    </svg>
     <nav class="nav">
         <ul class="nav__ul">
             <li><a class="nav__link" href="#">О нас</a></li>
@@ -22,12 +39,13 @@
     </nav>
 </header>
 <main>
-    <h1 class="header"><span class="color--yellow">GG</span> Place <span class="header__emoji">⚡</span></h1>
-    <h2 class="header__subtitle"> <span class="cursive">лучшее</span> место для хорошего времяпрепровождения</h2>
+    <h1 class="title"><span class="color--yellow">GG</span> Place <span class="title__emoji">⚡</span></h1>
+    <h2 class="title__subtitle"> лучшее место для хорошего времяпрепровождения</h2>
 
     <section class="main">
-        <img class="main__img" src="src/img/main_img.jpg" alt="" width="1280">
-        <p class="main__description">GG Place - это <span class="line-through">компьютерный</span> <span class="underline">киберспортивный</span> клуб, который нацелен на предоставление лучшего сервиса для вас и ваших друзей. Играйте, отдыхайте и наслаждайтесь в нашем уютном заведении!</p>
+        <img alt="" class="main__img" src="src/img/main_img.jpg">
+        <p class="main__description">GG Place - это киберспортивный клуб, который нацелен на предоставление лучшего
+            сервиса для вас и ваших друзей. Играйте, отдыхайте и наслаждайтесь в нашем уютном заведении!</p>
 
         <pre class="main__ascii">
 /\_/\
@@ -39,67 +57,130 @@
 
     <article class="benefits">
         <section class="benefits__section">
-            <img class="benefits__section--img"
-                 src="src/img/computer.jpg"
-                 alt="Вид изнутри на компьютер с топовыми комплектующими"
-                 aria-describedby="first_desc">
-            <p class="benefits__section--description" id="first_desc">Для вас круглосуточно доступны лучшие ПК с последними комплектующими, поддерживающими все новые технологии, такие как DLSS и RTX</p>
+            <img alt="Вид изнутри на компьютер с топовыми комплектующими"
+                 aria-describedby="first_desc"
+                 class="benefits__section__img"
+                 src="src/img/benefits/computer.jpg">
+            <p class="benefits__section--description" id="first_desc">Для вас круглосуточно доступны лучшие ПК с
+                последними комплектующими, поддерживающими все новые технологии, такие как DLSS и RTX</p>
         </section>
         <section class="benefits__section">
-            <img class="benefits__section--img"
-                 src="src/img/display.jpg"
-                 alt="Два монитора с красивой подсветкой"
-                 aria-describedby="second_desc">
+            <img alt="Два монитора с красивой подсветкой"
+                 aria-describedby="second_desc"
+                 class="benefits__section__img"
+                 src="src/img/benefits/display.jpg">
             <p class="benefits__section--description" id="second_desc">Топовые мониторы и лучшая переферия</p>
         </section>
         <section class="benefits__section">
-            <img class="benefits__section--img"
-                 src="src/img/sound.jpg"
-                 alt="Монитор на котором видно открытую программу для работы со звуком"
-                 aria-describedby="third_desc">
-            <p class="benefits__section--description" id="third_desc">В GG Place открыты зоны коворкинга, в которых есть все для работы с видео, графикой и звуком</p>
+            <img alt="Монитор на котором видно открытую программу для работы со звуком"
+                 aria-describedby="third_desc"
+                 class="benefits__section__img"
+                 src="src/img/benefits/sound.jpg">
+            <p class="benefits__section--description" id="third_desc">В GG Place открыты зоны коворкинга, в которых есть
+                все для работы с видео, графикой и звуком</p>
         </section>
     </article>
 
+    <section class="price">
+        <p class="price__desc">Актуальные цены</p>
+        <div class="price__table">
+            <div class="table__row">
+                <div class="table__header">Уровень места</div>
+                <div class="table__header">1 час</div>
+                <div class="table__header">2 часа</div>
+                <div class="table__header">3 часа</div>
+                <div class="table__header">Тариф All-Night</div>
+            </div>
+            <div class="table__row">
+                <div class="table__data">Базовый уровень</div>
+                <div class="table__data">100 ₽</div>
+                <div class="table__data">150 ₽</div>
+                <div class="table__data">200 ₽</div>
+                <div class="table__data">300 ₽</div>
+            </div>
+            <div class="table__row">
+                <div class="table__data">Продвинутый уровень</div>
+                <div class="table__data">200 ₽</div>
+                <div class="table__data">300 ₽</div>
+                <div class="table__data">450 ₽</div>
+                <div class="table__data">500 ₽</div>
+            </div>
+            <div class="table__row">
+                <div class="table__data">VIP</div>
+                <div class="table__data">300 ₽</div>
+                <div class="table__data">450 ₽</div>
+                <div class="table__data">700 ₽</div>
+                <div class="table__data">900 ₽</div>
+            </div>
+        </div>
+    </section>
+
     <section class="review-slider">
-        <div class="review">
-            <img class="review__img" src="src/img/profile_pic/profile1.jpg" alt="profile">
-            <p class="review__name">Иван</p>
-            <img class="review__rating" src="src/img/review/5_star_review.svg" alt="rating">
-            <p class="review__text">Я посетил компьютерный клуб и был приятно удивлён оказанным сервисом. Оборудование в клубе находится в отличном состоянии, что создаёт комфортную атмосферу для работы и отдыха. Я провёл там отличное время. Определённо рекомендую этот клуб как отличное место для проведения времени и наслаждения играми.</p>
-        </div>
-        <div class="review">
-            <img class="review__img" src="src/img/profile_pic/profile2.jpg" alt="profile">
-            <p class="review__name">Владимир</p>
-            <img class="review__rating" src="src/img/review/4_star_review.svg" alt="rating">
-            <p class="review__text">Первый раз пришёл в этот клуб, все очень понравилось. Удобное расположение(рядом две станции метро!) Доброжелательные и отзывчивые админы, с удовольствием вам помогут расположиться и ответят на ваши вопросы. Советую вам этот клуб!</p>
-        </div>
-        <div class="review">
-            <img class="review__img" src="src/img/profile_pic/profile3.jpg" alt="profile">
-            <p class="review__name">Артур</p>
-            <img class="review__rating" src="src/img/review/5_star_review.svg" alt="rating">
-            <p class="review__text">Всех приветствую, открылся клуб рядом с моим домом, накинули приветственных бонусов, хорошие админы. Вся техника новая, наушники удобные, чисто красиво. Вообщем и целом советую ходить, пока народу не полный зал)</p>
+        <p class="review-slider__text">Отзывы посетителей</p>
+        <div class="review-slider__slider">
+            <div class="review">
+                <div class="review__header">
+                    <img alt="profile" class="review__img" src="src/img/profile_pic/profile1.jpg">
+                    <div class="review__name-and-rating">
+                        <p class="review__name">Иван</p>
+                        <img alt="rating" class="review__rating" src="src/img/review/5_star_review.svg">
+                    </div>
+                </div>
+
+                <p class="review__text">Я посетил компьютерный клуб и был приятно удивлён оказанным сервисом.
+                    Оборудование в клубе находится в отличном состоянии, что создаёт комфортную атмосферу для работы и
+                    отдыха. Я провёл там отличное время. Определённо рекомендую этот клуб как отличное место для
+                    проведения времени и наслаждения играми.</p>
+            </div>
+            <div class="review">
+                <div class="review__header">
+                    <img alt="profile" class="review__img" src="src/img/profile_pic/profile2.jpg">
+                    <div class="review__name-and-rating">
+                        <p class="review__name">Владимир</p>
+                        <img alt="rating" class="review__rating" src="src/img/review/4_star_review.svg">
+                    </div>
+                </div>
+
+                <p class="review__text">Первый раз пришёл в этот клуб, все очень понравилось. Удобное расположение(рядом
+                    две станции метро!) Доброжелательные и отзывчивые админы, с удовольствием вам помогут расположиться
+                    и ответят на ваши вопросы. Советую вам этот клуб!</p>
+            </div>
+            <div class="review">
+                <div class="review__header">
+                    <img alt="profile" class="review__img" src="src/img/profile_pic/profile3.jpg">
+                    <div class="review__name-and-rating">
+                        <p class="review__name">Артур</p>
+                        <img alt="rating" class="review__rating" src="src/img/review/5_star_review.svg">
+                    </div>
+                </div>
+
+                <p class="review__text">Всех приветствую, открылся клуб рядом с моим домом, накинули приветственных
+                    бонусов, хорошие админы. Вся техника новая, наушники удобные, чисто красиво. Вообщем и целом советую
+                    ходить, пока народу не полный зал)</p>
+            </div>
         </div>
     </section>
 </main>
 <footer>
     <hr class="footer__hr">
-    <section class="contacts">
-        <img class="contacts__logo" src="src/img/branding/logo_ver1.svg" alt="GG Place" width="128px">
-        <a class="contacts__mail" href="mailto:gg@place.ru">gg@place.ru</a>
-    </section>
+    <div class="footer">
+        <section class="contacts">
+            <img alt="GG Place" class="contacts__logo" src="src/img/branding/logo_ver1.svg">
+            <a class="contacts__mail" href="mailto:gg@place.ru">gg@place.ru</a>
+        </section>
 
-    <section class="social-media">
-        <a class="social-media__link" href="#">
-            <img class="social-media__link__img" src="src/img/icons/vk.svg" alt="">
-        </a>
-        <a class="social-media__link" href="#">
-            <img class="social-media__link__img" src="src/img/icons/yt.svg" alt="">
-        </a>
-        <a class="social-media__link" href="#">
-            <img class="social-media__link__img" src="src/img/icons/whatsapp.svg" alt="">
-        </a>
-    </section>
+        <section class="social-media">
+            <a class="social-media__link" href="#">
+                <img alt="VK" class="social-media__link__img" src="src/img/icons/vk.svg">
+            </a>
+            <a class="social-media__link" href="#">
+                <img alt="WhatsApp" class="social-media__link__img" src="src/img/icons/whatsapp.svg">
+            </a>
+            <a class="social-media__link" href="#">
+                <img alt="YouTube" class="social-media__link__img" src="src/img/icons/yt.svg">
+            </a>
+        </section>
+    </div>
 </footer>
 </body>
 </html>
