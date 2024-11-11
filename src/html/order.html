@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Забронировать место</title>
+    <link rel="stylesheet" href="../style/order.css">
+    <script defer src="../js/loadTime.js"></script>
+</head>
+<body>
+<header class="header">
+    <img alt="GG Place" class="header__img" id="logo" src="../img/branding/logo_ver2.svg">
+    <svg class="header__decor--gamepad" fill="none" height="800" viewBox="0 0 800 800" width="800"
+         xmlns="http://www.w3.org/2000/svg">
+        <path d="M283.333 366.667V466.667M233.333 416.667H333.333" stroke="white" stroke-linecap="round"
+              stroke-width="50"/>
+        <path d="M87.4237 503.95L69.343 579.22C56.6313 632.143 90.4217 685.067 144.805 697.417C190.665 707.83 237.84 686.047 258.554 644.887L262.821 636.41C281.84 598.62 321.307 574.663 364.547 574.663H435.453C478.693 574.663 518.16 598.62 537.18 636.41L541.447 644.887C562.16 686.047 609.333 707.83 655.197 697.417C709.577 685.067 743.37 632.143 730.657 579.22L694.497 428.677C674.057 343.58 663.833 301.03 634.843 273.124C627.503 266.061 619.397 259.801 610.66 254.456C576.137 233.333 531.237 233.333 441.44 233.333H358.56C268.762 233.333 223.863 233.333 189.341 254.456C180.605 259.801 172.495 266.061 165.158 273.124C144.272 293.227 133.128 320.931 120.887 366.667"
+              stroke="white" stroke-linecap="round" stroke-width="50"/>
+        <path d="M400 233.333V200C400 181.591 414.923 166.667 433.333 166.667H466.667C485.077 166.667 500 151.743 500 133.333V100"
+              stroke="white" stroke-linecap="round" stroke-width="50"/>
+        <path d="M533.333 366.667C533.333 385.077 518.41 400 500 400C481.59 400 466.667 385.077 466.667 366.667C466.667 348.257 481.59 333.333 500 333.333C518.41 333.333 533.333 348.257 533.333 366.667Z"
+              fill="white"/>
+        <path d="M600 466.667C600 485.077 585.077 500 566.667 500C548.257 500 533.333 485.077 533.333 466.667C533.333 448.257 548.257 433.333 566.667 433.333C585.077 433.333 600 448.257 600 466.667Z"
+              fill="white"/>
+    </svg>
+    <nav class="nav">
+        <ul class="nav__ul">
+            <li><a class="nav__link" href="./index.html">Главная</a></li>
+            <li><a class="nav__link" href="./about.html">О нас</a></li>
+            <li><a class="nav__link" href="./order.html">Забронировать место</a></li>
+            <li><a class="nav__link" href="./contacts.html">Контакты</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <h1 class="title">Забронировать место</h1>
+    <form class="order-place__form">
+        <div class="form__hall-level">
+            <label for="hall-level">Уровень зала</label>
+            <select class="form__select" name="hall-level" id="hall-level">
+                <option value="Базовый" selected>Базовый</option>
+                <option value="Продвинутый">Продвинутый</option>
+                <option value="VIP">VIP</option>
+            </select>
+        </div>
+        <div class="form__row">
+            <label for="row">Ряд</label>
+            <input class="form__input" type="number" name="row" id="row" min="1" max="6" value="1">
+        </div>
+        <div class="form__seat">
+            <label for="seat">Место</label>
+            <input class="form__input" type="number" name="seat" id="seat" min="1" max="20" value="1">
+        </div>
+        <div class="form__rate">
+            <label for="start-rate">Начальный тариф<sup>*</sup></label>
+            <select class="form__select" name="start-rate" id="start-rate">
+                <option value="Базовый" selected>1 час</option>
+                <option value="Продвинутый">2 часа</option>
+                <option value="VIP">3 часа</option>
+                <option value="VIP">All-night</option>
+            </select>
+        </div>
+        <button class="form__button" type="submit">Подтвердить заказ</button>
+        <p class="form__description">* - тариф всегда можно продлить или изменить, подойдя к стойке администратора</p>
+    </form>
+</main>
+<footer>
+    <hr class="footer__hr">
+    <div class="footer">
+        <section class="contacts">
+            <img alt="GG Place" class="contacts__logo" src="../img/branding/logo_ver1.svg">
+            <a class="contacts__mail" href="mailto:gg@place.ru">gg@place.ru</a>
+        </section>
+
+        <p class="footer__load-time"></p>
+
+        <section class="social-media">
+            <a class="social-media__link" href="#">
+                <img alt="VK" class="social-media__link__img" src="../img/icons/vk.svg">
+            </a>
+            <a class="social-media__link" href="#">
+                <img alt="WhatsApp" class="social-media__link__img" src="../img/icons/whatsapp.svg">
+            </a>
+            <a class="social-media__link" href="#">
+                <img alt="YouTube" class="social-media__link__img" src="../img/icons/yt.svg">
+            </a>
+        </section>
+    </div>
+</footer>
+</body>
+</html>
