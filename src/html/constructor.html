@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GG Planner</title>
     <link rel="stylesheet" href="../style/constructor.css">
+    <script src="../js/constructor.js" defer></script>
+    <script src="../js/saveUserPreferences.js" defer></script>
 </head>
 <body>
 <header class="header">
@@ -47,8 +49,8 @@
             <li class="description__ul__item">Подобрать дополнительные опции – от питания до игровых пакетов</li>
             <li class="description__ul__item">Узнать стоимость бронирования заранее и получить выгодные предложения</li>
         </ul>
-        <p class="description__p">Задайте параметры, а GG Planner мгновенно сгенерирует всё необходимое, чтобы ваше посещение прошло с максимальным комфортом.</p>
-        <p class="description__p">Поднимите игру на новый уровень комфорта!</p>
+        <p class="description__p">Задайте параметры, а GG Planner мгновенно сгенерирует специальный пропуск, благодаря которому ваше посещение пройдет с максимальным комфортом.</p>
+        <p class="description__p">Поднимите игру на новый уровень!</p>
     </section>
     <pre class="decor">
 ||
@@ -56,7 +58,7 @@
 \  /
 \/</pre>
 
-    <form class="form">
+    <form class="form" id="form">
         <div class="form__people-amount">
             <label class="form__label" for="people-amount">Количество человек</label>
             <div class="input__wrapper">
@@ -79,70 +81,36 @@
             <input class="form__input" type="checkbox" name="additions" id="additions">
             <label class="form__label" for="additions">Дополнительные параметры</label>
         </div>
-        <fieldset class="form__gaming-zones">
+        <fieldset class="form__gaming-zones disabled" disabled>
             <legend>Необходимые игровые зоны</legend>
             <label class="form__label">
-                <input class="form__input" type="checkbox" name="gaming-zones" id="pc">
+                <input class="form__input" type="checkbox" name="pc" id="pc">
                 ПК зал
             </label>
             <label class="form__label">
-                <input class="form__input" type="checkbox" name="gaming-zones" id="console">
+                <input class="form__input" type="checkbox" name="console" id="console">
                 Консольный зал (PS/XBox)
             </label>
             <label class="form__label">
-                <input class="form__input" type="checkbox" name="gaming-zones" id="vr">
+                <input class="form__input" type="checkbox" name="vr" id="vr">
                 VR зона
             </label>
         </fieldset>
 
-        <div class="form__food">
-            <input class="form__input" type="checkbox" name="additions" id="food">
+        <div class="form__food disabled">
+            <input class="form__input" type="checkbox" name="food-included" id="food" disabled>
             <label class="form__label" for="food">Включить питание</label>
         </div>
-        <div class="form__game-preferences">
+        <div class="form__game-preferences disabled">
             <label class="form__label" for="game-preferences">Игровые предпочтения<sup>*</sup></label>
-            <textarea class="form__textarea" name="additions" id="game-preferences" rows="10"></textarea>
+            <textarea disabled class="form__textarea" name="game-preferences" id="game-preferences" rows="10"></textarea>
         </div>
 
-        <p class="form__p">* - мы проверим, установлены ли тайтлы на наших устройствах и, в случае отсутствия, заранее их установим</p>
+        <p class="form__p disabled" id="game-preferences__desc">* - мы проверим, установлены ли тайтлы на наших устройствах и, в случае отсутствия, заранее их установим</p>
 
         <button class="form__button" type="submit">Готово</button>
     </form>
-    <div class="result">
-        <p class="result__time">18:04</p>
-        <h1 class="result__title">GG Place</h1>
-        <p class="result__subtitle">pass</p>
-
-        <div class="result__people-amount">
-            <p class="result__description">Количество человек - </p>
-            <p class="result__number">8</p>
-        </div>
-        <div class="result__hall-lvl">
-            <p>Уровень зала - </p>
-            <p>Продвинутый</p>
-        </div>
-        <div class="result__duration">
-            <p>Забронированное время - </p>
-            <p>9 часов</p>
-        </div>
-        <div class="result__zones">
-            <p>Зоны</p>
-            <p>ПК зал</p>
-            <p>Консольный зал</p>
-            <p>VR Arena</p>
-        </div>
-        <p>+ питание</p>
-        <div class="result__map">
-            <p>Карта GG Place</p>
-            <p>(выделенные зоны для вас)</p>
-            <img src="../img/img_placeholder.png" alt="" width="500px">
-        </div>
-        <img src="logo" alt="">
-        <div class="result__price">
-            <p>Итого:</p>
-            <p>835 р</p>
-        </div>
-    </div>
+    <div class="result" style="display: none"></div>
 </main>
 <footer>
     <hr class="footer__hr">
