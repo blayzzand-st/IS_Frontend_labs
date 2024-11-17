@@ -8,6 +8,7 @@
     <title>О GG Place</title>
     <link rel="stylesheet" href="../style/about.css">
     <script defer src="../js/loadTime.js"></script>
+    <script src="../js/about.js" defer></script>
 </head>
 <body>
 <header class="header">
@@ -49,6 +50,23 @@
         <p>
             Найти нас можно по адресу г. Пермь, улица Красноармейская д. 8 этаж 5. Мы открыты 24/7!
         </p>
+    </article>
+    <article class="guest-book">
+        <h2 class="guest-book__title">Форум для посетителей</h2>
+        <p class="guest-book__desc">Отзывы, вопросы, замечения и предложения</p>
+
+        <div class="guest-book__table  disabled">
+            <div class="guest-book__decor"></div>
+            <div class="guest-book__control-panel">
+                <button class="control-panel__previous">&#8249;</button>
+                <div class="control-panel__divider"></div>
+                <button class="control-panel__next">&#8250;</button>
+            </div>
+        </div>
+        <div class="preloader">
+            <div class="preloader__error disabled">⚠ Что-то пошло не так</div>
+            <div class="preloader__animator"></div>
+        </div>
     </article>
 </main>
 <footer>

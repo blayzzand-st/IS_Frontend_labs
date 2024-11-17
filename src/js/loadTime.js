@@ -25,7 +25,7 @@ function getMillisecondsLabel(number) {
 
     switch (lastDigit) {
         case 1:
-            return `миллисекунда`;
+            return `миллисекунду`;
         case 2:
         case 3:
         case 4:

@@ -238,7 +238,7 @@ function interceptSubmit() {
                 document.querySelector("#vr").checked
             ]
 
-            foodBooked = isFoodIncluded;
+            foodBooked = isFoodIncluded.checked;
         } else {
             bookedZones = [true, false, false];
             foodBooked = false;
