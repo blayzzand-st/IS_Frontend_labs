@@ -420,3 +420,27 @@ body {
         background-position-y: 100%;
     }
 }
+
+#promo-code {
+    width: 30%;
+    margin: 0 auto;
+    cursor: pointer;
+    user-select: none;
+
+    @media (max-width: 576px) {
+        width: 100%;
+    }
+}
+
+.toaster {
+    text-align: center;
+    line-height: 1.75;
+    background-image: linear-gradient(to bottom right, rgb(201, 89, 23), rgb(203, 81, 13)) !important;
+    box-shadow: 0 3px 10px 2px rgba(252, 153, 23, 0.3) !important;
+}
+
+.toaster--notification {
+    text-align: center;
+    background: var(--color--background) !important;
+    box-shadow: 0 0 5px 1px rgba(245, 245, 245, 0.2) !important;
+}

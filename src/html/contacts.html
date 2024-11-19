@@ -8,6 +8,10 @@
     <title>Связаться с нами</title>
     <link href="../style/contacts.css" rel="stylesheet">
     <script defer src="../js/loadTime.js"></script>
+
+    <!-- particles.js library -->
+    <script defer src="../js/particles.js"></script>
+    <script defer src="../js/contacts.js"></script>
 </head>
 <body>
 <header class="header">
@@ -35,31 +39,38 @@
     </nav>
 </header>
 <main>
-    <h1 class="title">Связаться с нами</h1>
-    <article class="description">
-        <p>Связаться с представителем GG Place можно несколькими способами:</p>
-        <ul class="description__ul">
-            <li class="description__ul__item">По телефону <a class="description__link" href="tel:88005553535">8-800-555-35-35</a></li>
-            <li class="description__ul__item">Отправив электронное письмо на адрес <a class="description__link" href="mailto:gg@place.ru">gg@place.ru</a></li>
-            <li class="description__ul__item">Заполнив форму ниже</li>
-        </ul>
-    </article>
-    <section class="contact-us">
-        <form class="contact-us__form">
-            <div class="contact-us__form__name">
-                <label class="contact-us__label" for="name">Ваше имя:</label>
-                <input class="contact-us__input--text" id="name" name="name" type="text">
-            </div>
-            <div class="contact-us__form__email">
-                <label class="contact-us__label" for="mail">Ваша почта:</label>
-                <input class="contact-us__input--email" id="mail" name="mail" type="email">
-            </div>
+    <div id="particles-js"></div>
+    <div class="content">
+        <h1 class="title">Связаться с нами</h1>
+        <article class="description">
+            <p>Связаться с представителем GG Place можно несколькими способами:</p>
+            <ul class="description__ul">
+                <li class="description__ul__item">По телефону <a class="description__link" href="tel:88005553535">8-800-555-35-35</a>
+                </li>
+                <li class="description__ul__item">Отправив электронное письмо на адрес <a class="description__link"
+                                                                                          href="mailto:gg@place.ru">gg@place.ru</a>
+                </li>
+                <li class="description__ul__item">Заполнив форму ниже</li>
+            </ul>
+        </article>
+        <section class="contact-us">
+            <form class="contact-us__form">
+                <div class="contact-us__form__name">
+                    <label class="contact-us__label" for="name">Ваше имя:</label>
+                    <input class="contact-us__input--text" id="name" name="name" type="text">
+                </div>
+                <div class="contact-us__form__email">
+                    <label class="contact-us__label" for="mail">Ваша почта:</label>
+                    <input class="contact-us__input--email" id="mail" name="mail" type="email">
+                </div>
 
-            <textarea class="contact-us__textarea" cols="20" id="message" name="message" rows="10" placeholder="Ваше сообщение"></textarea>
+                <textarea class="contact-us__textarea" cols="20" id="message" name="message" placeholder="Ваше сообщение"
+                          rows="10"></textarea>
 
-            <button class="contact-us__form__button" type="submit">Отправить сообщение</button>
-        </form>
-    </section>
+                <button class="contact-us__form__button" type="submit">Отправить сообщение</button>
+            </form>
+        </section>
+    </div>
 </main>
 <footer>
     <hr class="footer__hr">
